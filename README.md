@@ -133,6 +133,69 @@ print(y1)
 xmax = x[y1]   #将下标传递给数组
 print(f'最大的三个数为{xmax}')
 
+# 元组的轴和转置
+# 数组转置换轴
+data = np.arange(15).reshape(3,5)
+print(data.shape)   # (3,5)
+print(data.T)
+print(data.T.shape)  #(5,3)
+
+print(data.reshape(5,3))   # 输出结果会有差异  reshape 会以按照行的位置抽取数值，也就是将数组按行排列为一维，然后逐个按照reshape（）排列
+
+# transpose()   行列转置   transpose = T
+x = np.arange(24).reshape(4,6)
+print(x)
+print(x.transpose())    
+
+# swapaxes 轴转置
+print(x.swapaxes(1,0))   # x.shape=(4,6),对应元组索引为[0,1] 经swapaxes(1,0) 就是将0轴和1轴互换位置
+
+# 轴转置心得
+# 三维数组在进行轴转置时， 不变的维的数据 不动
+arr = np.arange(16).reshape(2,2,4)  # 2块，2行4列的数组
+print(arr)
+
+arr.transpose((1,0,2))          #块和行转置，shape为（2，2，4） ，
+列的顺序不变，行和块之间进行变换
+
+arr.transpose((2,1,0))          #块和列转置，shape为（4,2,2）
+行的顺序不变，列和块之间进行变换  
+
+arr.transpose(0,2,1)            #行和列转置，shape为(2,4,2)
+
+
+# swapaxes和transpose 没什么区别
+transpose( *, *,*)  有三个参数 初始为(0,1,2) 
+swapaxes(*, *) 有两个参数
+
+arr.transpose(1,0,2)  # 0 和 1 互换
+arr.swapaxes(1,0)    # 0 和 1 互换
+即 arr.transpose(1,0,2) = arr.swapaxes(1,0) 
+
+# random 随机函数
+ import random
+ 
+ 
+# seed() 向随机数生成器传递随机状态种子
+random.seed(10)  
+print(random.random())  # 每次都输入种子之后，打印的随机数都是相同的
+
+rand 返回[0,1]之间的服从均匀分布的数据
+a = np.random.rand(3)  #一维
+b = np.random.rand(2,3) #二维
+c = np.random.rand(2,3,4) #三维
+
+
+randn 返回服从标准正态分布的随机数(浮点数) X ~ N(0,1)
+
+
+
+
+
+
+
+
+
 
 
 
