@@ -180,29 +180,29 @@ arr.swapaxes(1,0)    # 0 和 1 互换
 random.seed(10)  
 print(random.random())  # 每次都输入种子之后，打印的随机数都是相同的
 
-rand 返回[0,1]之间的服从均匀分布的数据
-a = np.random.rand(3)  #一维  
-b = np.random.rand(2,3) #二维 
-c = np.random.rand(2,3,4) #三维 
+rand 返回[0,1]之间的服从均匀分布的数据  
+a = np.random.rand(3)  #一维    
+b = np.random.rand(2,3) #二维   
+c = np.random.rand(2,3,4) #三维   
 
 
-randn 返回服从标准正态分布的随机数(浮点数) X ~ N(0,1)
-a = np.random.randn(3)  #一维 
-b = np.random.randn(2,3) #二维  
-c = np.random.randn(2,3,4) #三维  
+randn 返回服从标准正态分布的随机数(浮点数) X ~ N(0,1)  
+a = np.random.randn(3)  #一维   
+b = np.random.randn(2,3) #二维    
+c = np.random.randn(2,3,4) #三维    
 
-randint 随机整数
-a = np.random.randint(3)  # 0~2之间的随机整数 
-b = np.random.randint(1,10)   # 1~9之间的随机整数
-c = np.random.randint(1,10,size=(5,))  #1~9之间随机5个整数  取得值会重复 因为每一个值都是独立抽取的
-d = np.random.randint(1,20,size=(3,4))  # 1~19之间 随机3行4列   共12个随机整数
-e = np.random.randint(1,20,size=(2,3,4))  # 1~19之间 随机2块3行4列 
+randint 随机整数  
+a = np.random.randint(3)  # 0~2之间的随机整数  
+b = np.random.randint(1,10)   # 1~9之间的随机整数  
+c = np.random.randint(1,10,size=(5,))  #1~9之间随机5个整数  取得值会重复 因为每一个值都是独立抽取的 
+d = np.random.randint(1,20,size=(3,4))  # 1~19之间 随机3行4列   共12个随机整数  
+e = np.random.randint(1,20,size=(2,3,4))  # 1~19之间 随机2块3行4列   
 
 
-random 生成0.0至1.0的随机数 浮点数
-一维 = np.random.random(3)
-二维 = np.random.random(size=(2,3))
-三维 = np.random.random(size=(3,2,3))
+random 生成0.0至1.0的随机数 浮点数  
+一维 = np.random.random(3)  
+二维 = np.random.random(size=(2,3)) 
+三维 = np.random.random(size=(3,2,3)) 
 
 
 choice 从一维数组中生成随机数
