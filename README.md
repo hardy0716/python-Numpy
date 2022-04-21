@@ -191,11 +191,16 @@ a = np.random.randn(3)  #一维
 b = np.random.randn(2,3) #二维    
 c = np.random.randn(2,3,4) #三维    
 
-randint 随机整数  
-a = np.random.randint(3)  # 0~2之间的随机整数  
-b = np.random.randint(1,10)   # 1~9之间的随机整数  
-c = np.random.randint(1,10,size=(5,))  #1~9之间随机5个整数  取得值会重复 因为每一个值都是独立抽取的 
+
+randint 随机整数    
+a = np.random.randint(3)  # 0~2之间的随机整数    
+
+b = np.random.randint(1,10)   # 1~9之间的随机整数   
+
+c = np.random.randint(1,10,size=(5,))  #1~9之间随机5个整数  取得值会重复 因为每一个值都是独立抽取的  
+
 d = np.random.randint(1,20,size=(3,4))  # 1~19之间 随机3行4列   共12个随机整数  
+
 e = np.random.randint(1,20,size=(2,3,4))  # 1~19之间 随机2块3行4列   
 
 
@@ -207,7 +212,9 @@ random 生成0.0至1.0的随机数 浮点数
 
 choice 从一维数组中生成随机数
    第一参数是一个1维数组，如果只有一个数字那就看成range(5)
-   第二参数是维度和元素个数，一个数字是1维，数字是几就是几个元素，一次类推
+   
+   第二参数是维度和元素个数，一个数字是1维，数字是几就是几个元素，依次类推
+   
 a = np.random.choice(5,3)
 b = np.random.choice(5,(2,3))
 c = np.random.choice([1,2,9,4,8,6,7,5],3)
@@ -259,10 +266,12 @@ x = np.random.randn(8)    # randn从标准正态分布中得到的随机变量
 y = np.random.randn(8)
 print(np.maximum(x,y))   # 对位比较大小，取大的，生成新的数组返回，逐个元素地将 x和 y 中元素的最大值计算出来
 
+
 # 还要好多函数 自己总结！！！！！！！！！！！！！
 sign(x)  # 计算各元素的正负号~   1：正； -1:负； 0：零
 ceil 天花板 floor 地板 rint 四舍五入取整数
 print(np.modf(x))        # modf 将数组中数据的小数位和整数位两部分独立写开
+
 print(np.mod(5,4))       # mod(除数，被除数)  返回余
 ...........
 ...........
